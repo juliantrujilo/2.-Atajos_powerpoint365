@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atajos de Teclado – PowerPoint 365 | SENA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ppt: #c0392b;
+  --ppt-claro: #e74c3c;
+  --sena-verde: #39a900;
+  --texto: #1a1a2e;
+  --texto-dim: #4a5568;
+  --texto-dimmer: #718096;
+  --bg: #f8fafc;
+  --borde: #e2e8f0;
+  --cat1: #c0392b;
+  --cat2: #8b5cf6;
+  --cat3: #f59e0b;
+  --cat4: #27ae60;
+  --cat5: #2b579a;
+  --cat6: #0891b2;
+  --cat7: #e67e22;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; color:var(--texto); background:var(--bg); line-height:1.6; overflow-x:hidden; }
+
+.topbar { position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.96); backdrop-filter:blur(12px); border-bottom:1px solid var(--borde); padding:12px 20px; display:flex; align-items:center; justify-content:space-between; box-shadow:0 2px 8px rgba(0,0,0,0.05); flex-wrap:wrap; gap:10px; }
+.topbar-left { display:flex; align-items:center; gap:12px; }
+.sena-logo { background:var(--sena-verde); color:#fff; font-weight:900; font-size:15px; padding:6px 13px; border-radius:8px; letter-spacing:1px; }
+.topbar-brand { font-family:'Syne',sans-serif; font-size:13px; font-weight:700; }
+.topbar-sub { font-size:11px; color:var(--texto-dimmer); margin-top:1px; }
+.topbar-nav { display:flex; gap:14px; flex-wrap:wrap; }
+.topbar-nav a { text-decoration:none; font-size:12px; font-weight:600; color:var(--texto-dimmer); transition:color .2s; white-space:nowrap; }
+.topbar-nav a:hover { color:var(--ppt); }
+
+.hero { background:linear-gradient(135deg,#2a0a0a 0%,#4a1010 55%,#6b1a1a 100%); padding:56px 20px; text-align:center; position:relative; overflow:hidden; }
+.hero::before { content:''; position:absolute; width:500px; height:500px; background:var(--ppt); border-radius:50%; top:-250px; left:-120px; opacity:0.18; filter:blur(80px); }
+.hero::after { content:''; position:absolute; width:350px; height:350px; background:var(--ppt-claro); border-radius:50%; bottom:-180px; right:-80px; opacity:0.12; filter:blur(70px); }
+.hero-tag { display:inline-flex; align-items:center; gap:8px; background:rgba(192,57,43,0.2); border:1px solid rgba(231,76,60,0.35); color:#f5a9a0; padding:7px 18px; border-radius:30px; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:20px; position:relative; z-index:1; }
+.hero h1 { font-family:'Syne',sans-serif; font-size:clamp(28px,6vw,54px); font-weight:800; color:#fff; line-height:1.15; margin-bottom:14px; position:relative; z-index:1; }
+.hero h1 span { background:linear-gradient(135deg,#f5a9a0,var(--ppt-claro)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.hero-desc { font-size:clamp(14px,2vw,17px); color:rgba(255,255,255,0.7); max-width:560px; margin:0 auto 28px; position:relative; z-index:1; }
+
+.stats { display:flex; justify-content:center; gap:32px; flex-wrap:wrap; position:relative; z-index:1; }
+.stat { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:14px 24px; text-align:center; backdrop-filter:blur(8px); }
+.stat-num { font-family:'Syne',sans-serif; font-size:28px; font-weight:800; color:#fff; display:block; }
+.stat-label { font-size:12px; color:rgba(255,255,255,0.6); }
+
+.buscador-wrap { max-width:1000px; margin:36px auto 0; padding:0 20px; }
+.buscador { display:flex; align-items:center; gap:10px; background:#fff; border:2px solid var(--borde); border-radius:12px; padding:10px 16px; transition:border-color .2s; }
+.buscador:focus-within { border-color:var(--ppt); }
+.buscador span { font-size:18px; }
+.buscador input { border:none; outline:none; font-size:14px; color:var(--texto); font-family:'Inter',sans-serif; width:100%; background:transparent; }
+.buscador input::placeholder { color:var(--texto-dimmer); }
+
+.filtros-wrap { max-width:1000px; margin:16px auto 0; padding:0 20px; }
+.filtros-wrap h2 { font-family:'Syne',sans-serif; font-size:14px; font-weight:700; color:var(--texto-dimmer); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:14px; }
+.filtros { display:flex; gap:10px; flex-wrap:wrap; }
+.filtro-btn { padding:8px 16px; border-radius:30px; border:2px solid var(--borde); background:#fff; font-size:12px; font-weight:700; cursor:pointer; color:var(--texto-dim); transition:all .2s; font-family:'Inter',sans-serif; }
+.filtro-btn:hover { border-color:var(--ppt); color:var(--ppt); }
+.filtro-btn.activo { background:var(--ppt); border-color:var(--ppt); color:#fff; }
+
+.section { max-width:1000px; margin:0 auto; padding:36px 20px 48px; }
+
+.categoria { margin-bottom:32px; border-radius:20px; overflow:hidden; border:2px solid var(--borde); background:#fff; }
+.categoria-header { display:flex; align-items:center; gap:12px; padding:18px 24px; background:var(--cat-color); color:#fff; }
+.categoria-header .emoji { font-size:24px; }
+.categoria-header h3 { font-family:'Syne',sans-serif; font-size:18px; font-weight:800; }
+.categoria-header .count { margin-left:auto; background:rgba(255,255,255,0.2); padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+
+.atajos-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1px; background:var(--borde); }
+.atajo-item { background:#fff; padding:14px 20px; display:flex; align-items:center; gap:14px; transition:background .15s; }
+.atajo-item:hover { background:#fff5f5; }
+.atajo-item.oculto { display:none; }
+
+.kbd-group { display:flex; align-items:center; gap:4px; flex-shrink:0; min-width:130px; flex-wrap:wrap; }
+kbd { display:inline-flex; align-items:center; justify-content:center; background:#fff; border:2px solid var(--borde); border-bottom:3px solid #c5cfe0; border-radius:7px; padding:4px 9px; font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:var(--texto); min-width:28px; text-align:center; box-shadow:0 1px 2px rgba(0,0,0,0.08); white-space:nowrap; }
+.plus { font-size:12px; color:var(--texto-dimmer); font-weight:700; }
+.atajo-accion { font-size:13px; color:var(--texto-dim); line-height:1.4; flex:1; }
+.atajo-accion strong { color:var(--texto); font-weight:600; display:block; }
+
+.sin-resultados { text-align:center; padding:40px; color:var(--texto-dimmer); font-size:15px; display:none; }
+.sin-resultados .emoji { font-size:40px; display:block; margin-bottom:10px; }
+
+.tip-box { background:linear-gradient(135deg,rgba(192,57,43,0.06),rgba(192,57,43,0.02)); border:2px solid rgba(192,57,43,0.15); border-radius:16px; padding:20px 24px; display:flex; gap:14px; align-items:flex-start; }
+.tip-box .tip-icon { font-size:28px; flex-shrink:0; }
+.tip-box h4 { font-family:'Syne',sans-serif; font-size:15px; font-weight:700; color:var(--ppt); margin-bottom:4px; }
+.tip-box p { font-size:13px; color:var(--texto-dim); line-height:1.6; }
+
+footer { background:var(--texto); text-align:center; padding:24px; font-size:12px; color:rgba(255,255,255,0.55); line-height:1.8; margin-top:48px; }
+footer span { color:#fff; font-weight:700; }
+
+.reveal { opacity:0; transform:translateY(20px); transition:opacity .5s ease,transform .5s ease; }
+.reveal.in { opacity:1; transform:translateY(0); }
+
+@media(max-width:640px){
+  .topbar { flex-direction:column; align-items:flex-start; }
+  .stats { gap:12px; }
+  .atajos-grid { grid-template-columns:1fr; }
+  .kbd-group { min-width:110px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="topbar-left">
+    <div class="sena-logo">SENA</div>
+    <div>
+      <div class="topbar-brand">Atajos de Teclado · PowerPoint 365</div>
+      <div class="topbar-sub">Prevención y Control Ambiental · Ficha 3410069</div>
+    </div>
+  </div>
+  <div class="topbar-nav">
+    <a href="#archivo">Archivo</a>
+    <a href="#formato">Formato</a>
+    <a href="#diapositivas">Diapositivas</a>
+    <a href="#edicion">Edición</a>
+    <a href="#presentacion">Presentación</a>
+    <a href="#vistas">Vistas</a>
+    <a href="#objetos">Objetos</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">⌨️ Microsoft PowerPoint 365</div>
+  <h1>Atajos de Teclado<br><span>PowerPoint 365</span></h1>
+  <p class="hero-desc">Crea presentaciones más rápido dominando estos comandos. Menos clics, más impacto.</p>
+  <div class="stats">
+    <div class="stat"><span class="stat-num">38</span><span class="stat-label">Atajos</span></div>
+    <div class="stat"><span class="stat-num">7</span><span class="stat-label">Categorías</span></div>
+    <div class="stat"><span class="stat-num">🎨</span><span class="stat-label">Diseño ágil</span></div>
+  </div>
+</div>
+
+<div class="buscador-wrap reveal">
+  <div class="buscador">
+    <span>🔍</span>
+    <input type="text" id="buscador" placeholder="Busca un atajo... ej: nueva diapositiva, presentar, agrupar">
+  </div>
+</div>
+
+<div class="filtros-wrap reveal">
+  <h2>Filtrar por categoría</h2>
+  <div class="filtros">
+    <button class="filtro-btn activo" data-cat="todos">✅ Todos</button>
+    <button class="filtro-btn" data-cat="archivo">📁 Archivo</button>
+    <button class="filtro-btn" data-cat="formato">✏️ Formato</button>
+    <button class="filtro-btn" data-cat="diapositivas">🖼️ Diapositivas</button>
+    <button class="filtro-btn" data-cat="edicion">✂️ Edición</button>
+    <button class="filtro-btn" data-cat="presentacion">🎤 Presentación</button>
+    <button class="filtro-btn" data-cat="vistas">👁️ Vistas</button>
+    <button class="filtro-btn" data-cat="objetos">🔶 Objetos</button>
+  </div>
+</div>
+
+<div class="section">
+
+  <div class="sin-resultados" id="sinResultados">
+    <span class="emoji">🤔</span>
+    No se encontraron atajos para tu búsqueda.
+  </div>
+
+  <!-- ARCHIVO -->
+  <div class="categoria reveal" data-cat="archivo" id="archivo" style="--cat-color:var(--cat1);">
+    <div class="categoria-header"><span class="emoji">📁</span><h3>Archivo y Documento</h3><span class="count">5 atajos</span></div>
+    <div class="atajos-grid">
+      <div class="atajo-item" data-texto="nueva presentación archivo nuevo">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>N</kbd></div>
+        <div class="atajo-accion"><strong>Nueva presentación</strong>Crea una presentación en blanco nueva</div>
+      </div>
+      <div class="atajo-item" data-texto="abrir presentación archivo">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>A</kbd></div>
+        <div class="atajo-accion"><strong>Abrir presentación</strong>Abre el cuadro de diálogo para abrir un archivo</div>
+      </div>
+      <div class="atajo-item" data-texto="guardar archivo">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>G</kbd></div>
+        <div class="atajo-accion"><strong>Guardar</strong>Guarda la presentación actual</div>
+      </div>
+      <div class="atajo-item" data-texto="guardar como nombre formato pdf">
+        <div class="kbd-group"><kbd>F12</kbd></div>
+        <div class="atajo-accion"><strong>Guardar como</strong>Guarda con nuevo nombre o formato (PDF, etc.)</div>
+      </div>
+      <div class="atajo-item" data-texto="imprimir presentación">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>P</kbd></div>
+        <div class="atajo-accion"><strong>Imprimir</strong>Abre el panel de impresión de diapositivas</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORMATO -->
+  <div class="categoria reveal" data-cat="formato" id="formato" style="--cat-color:var(--cat2);">
+    <div class="categoria-header"><span class="emoji">✏️</span><h3>Formato de Texto</h3><span class="count">7 atajos</span></div>
+    <div class="atajos-grid">
+      <div class="atajo-item" data-texto="negrita bold texto resaltar">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>N</kbd></div>
+        <div class="atajo-accion"><strong>Negrita</strong>Aplica o quita el formato negrita al texto seleccionado</div>
+      </div>
+      <div class="atajo-item" data-texto="cursiva itálica texto">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>K</kbd></div>
+        <div class="atajo-accion"><strong>Cursiva</strong>Aplica o quita el formato cursiva al texto seleccionado</div>
+      </div>
+      <div class="atajo-item" data-texto="subrayado texto underline">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>S</kbd></div>
+        <div class="atajo-accion"><strong>Subrayado</strong>Aplica o quita el subrayado al texto seleccionado</div>
+      </div>
+      <div class="atajo-item" data-texto="centrar texto alinear centro">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>T</kbd></div>
+        <div class="atajo-accion"><strong>Centrar texto</strong>Alinea el texto al centro del cuadro de texto</div>
+      </div>
+      <div class="atajo-item" data-texto="justificar texto ambos márgenes">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>J</kbd></div>
+        <div class="atajo-accion"><strong>Justificar texto</strong>Alinea el texto a ambos márgenes del cuadro</div>
+      </div>
+      <div class="atajo-item" data-texto="aumentar tamaño fuente letra grande">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>&gt;</kbd></div>
+        <div class="atajo-accion"><strong>Aumentar tamaño de fuente</strong>Incrementa el tamaño del texto seleccionado</div>
+      </div>
+      <div class="atajo-item" data-texto="reducir tamaño fuente letra pequeña">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>&lt;</kbd></div>
+        <div class="atajo-accion"><strong>Reducir tamaño de fuente</strong>Disminuye el tamaño del texto seleccionado</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIAPOSITIVAS -->
+  <div class="categoria reveal" data-cat="diapositivas" id="diapositivas" style="--cat-color:var(--cat3);">
+    <div class="categoria-header"><span class="emoji">🖼️</span><h3>Manejo de Diapositivas</h3><span class="count">7 atajos</span></div>
+    <div class="atajos-grid">
+      <div class="atajo-item" data-texto="nueva diapositiva insertar agregar">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>M</kbd></div>
+        <div class="atajo-accion"><strong>Nueva diapositiva</strong>Inserta una nueva diapositiva después de la actual</div>
+      </div>
+      <div class="atajo-item" data-texto="duplicar diapositiva copiar igual">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>D</kbd></div>
+        <div class="atajo-accion"><strong>Duplicar diapositiva</strong>Crea una copia exacta de la diapositiva seleccionada</div>
+      </div>
+      <div class="atajo-item" data-texto="eliminar diapositiva borrar suprimir">
+        <div class="kbd-group"><kbd>Supr</kbd></div>
+        <div class="atajo-accion"><strong>Eliminar diapositiva</strong>Elimina la diapositiva seleccionada en el panel</div>
+      </div>
+      <div class="atajo-item" data-texto="anterior diapositiva retroceder panel">
+        <div class="kbd-group"><kbd>Re Pág</kbd></div>
+        <div class="atajo-accion"><strong>Diapositiva anterior</strong>Va a la diapositiva anterior en el panel lateral</div>
+      </div>
+      <div class="atajo-item" data-texto="siguiente diapositiva avanzar panel">
+        <div class="kbd-group"><kbd>Av Pág</kbd></div>
+        <div class="atajo-accion"><strong>Diapositiva siguiente</strong>Va a la diapositiva siguiente en el panel lateral</div>
+      </div>
+      <div class="atajo-item" data-texto="seleccionar todo objetos diapositiva">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>E</kbd></div>
+        <div class="atajo-accion"><strong>Seleccionar todo</strong>Selecciona todos los objetos de la diapositiva actual</div>
+      </div>
+      <div class="atajo-item" data-texto="ocultar diapositiva hide saltar">
+        <div class="kbd-group"><kbd>Alt</kbd><span class="plus">+</span><kbd>H</kbd><span class="plus">+</span><kbd>O</kbd></div>
+        <div class="atajo-accion"><strong>Ocultar diapositiva</strong>Oculta la diapositiva para que no aparezca al presentar</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDICIÓN -->
+  <div class="categoria reveal" data-cat="edicion" id="edicion" style="--cat-color:var(--cat4);">
+    <div class="categoria-header"><span class="emoji">✂️</span><h3>Edición</h3><span class="count">7 atajos</span></div>
+    <div class="atajos-grid">
+      <div class="atajo-item" data-texto="copiar copy objeto texto">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>C</kbd></div>
+        <div class="atajo-accion"><strong>Copiar</strong>Copia el objeto o texto seleccionado</div>
+      </div>
+      <div class="atajo-item" data-texto="pegar paste portapapeles">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>V</kbd></div>
+        <div class="atajo-accion"><strong>Pegar</strong>Pega el contenido del portapapeles</div>
+      </div>
+      <div class="atajo-item" data-texto="cortar cut mover objeto">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>X</kbd></div>
+        <div class="atajo-accion"><strong>Cortar</strong>Corta el objeto o texto seleccionado</div>
+      </div>
+      <div class="atajo-item" data-texto="deshacer undo revertir acción">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Z</kbd></div>
+        <div class="atajo-accion"><strong>Deshacer</strong>Revierte la última acción realizada</div>
+      </div>
+      <div class="atajo-item" data-texto="rehacer redo repetir acción">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Y</kbd></div>
+        <div class="atajo-accion"><strong>Rehacer</strong>Repite la acción que fue deshecha</div>
+      </div>
+      <div class="atajo-item" data-texto="buscar find texto contenido">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>B</kbd></div>
+        <div class="atajo-accion"><strong>Buscar</strong>Abre el panel de búsqueda en la presentación</div>
+      </div>
+      <div class="atajo-item" data-texto="buscar reemplazar replace texto">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>L</kbd></div>
+        <div class="atajo-accion"><strong>Buscar y reemplazar</strong>Busca y reemplaza texto en toda la presentación</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRESENTACIÓN -->
+  <div class="categoria reveal" data-cat="presentacion" id="presentacion" style="--cat-color:var(--cat5);">
+    <div class="categoria-header"><span class="emoji">🎤</span><h3>Modo Presentación</h3><span class="count">7 atajos</span></div>
+    <div class="atajos-grid">
+      <div class="atajo-item" data-texto="iniciar presentación inicio F5 empezar">
+        <div class="kbd-group"><kbd>F5</kbd></div>
+        <div class="atajo-accion"><strong>Iniciar desde el principio</strong>Inicia la presentación desde la primera diapositiva</div>
+      </div>
+      <div class="atajo-item" data-texto="iniciar presentación diapositiva actual desde aquí">
+        <div class="kbd-group"><kbd>Shift</kbd><span class="plus">+</span><kbd>F5</kbd></div>
+        <div class="atajo-accion"><strong>Iniciar desde la diapositiva actual</strong>Inicia la presentación desde donde estás trabajando</div>
+      </div>
+      <div class="atajo-item" data-texto="avanzar siguiente animación click espacio">
+        <div class="kbd-group"><kbd>→</kbd><span class="plus">/</span><kbd>Espacio</kbd></div>
+        <div class="atajo-accion"><strong>Avanzar</strong>Va a la siguiente diapositiva o dispara la siguiente animación</div>
+      </div>
+      <div class="atajo-item" data-texto="retroceder anterior diapositiva presentación">
+        <div class="kbd-group"><kbd>←</kbd><span class="plus">/</span><kbd>Re Pág</kbd></div>
+        <div class="atajo-accion"><strong>Retroceder</strong>Regresa a la diapositiva o animación anterior</div>
+      </div>
+      <div class="atajo-item" data-texto="pantalla negra blanca pausa ocultar">
+        <div class="kbd-group"><kbd>B</kbd><span class="plus">/</span><kbd>W</kbd></div>
+        <div class="atajo-accion"><strong>Pantalla negra / blanca</strong>Pausa mostrando pantalla negra (B) o blanca (W)</div>
+      </div>
+      <div class="atajo-item" data-texto="puntero láser rojo mostrar señalar">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>L</kbd></div>
+        <div class="atajo-accion"><strong>Puntero láser</strong>Activa el puntero láser rojo durante la presentación</div>
+      </div>
+      <div class="atajo-item" data-texto="salir terminar presentación escape cerrar">
+        <div class="kbd-group"><kbd>Esc</kbd></div>
+        <div class="atajo-accion"><strong>Salir de la presentación</strong>Termina el modo presentación y regresa a la edición</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISTAS -->
+  <div class="categoria reveal" data-cat="vistas" id="vistas" style="--cat-color:var(--cat6);">
+    <div class="categoria-header"><span class="emoji">👁️</span><h3>Vistas y Zoom</h3><span class="count">3 atajos</span></div>
+    <div class="atajos-grid">
+      <div class="atajo-item" data-texto="zoom acercar aumentar ampliar vista">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>+</kbd></div>
+        <div class="atajo-accion"><strong>Acercar (zoom +)</strong>Aumenta el zoom de la vista de edición</div>
+      </div>
+      <div class="atajo-item" data-texto="zoom alejar reducir disminuir vista">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>-</kbd></div>
+        <div class="atajo-accion"><strong>Alejar (zoom -)</strong>Reduce el zoom de la vista de edición</div>
+      </div>
+      <div class="atajo-item" data-texto="vista presentador notas vista presentación">
+        <div class="kbd-group"><kbd>Alt</kbd><span class="plus">+</span><kbd>F5</kbd></div>
+        <div class="atajo-accion"><strong>Vista del presentador</strong>Activa la vista del presentador con notas y vista previa</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OBJETOS -->
+  <div class="categoria reveal" data-cat="objetos" id="objetos" style="--cat-color:var(--cat7);">
+    <div class="categoria-header"><span class="emoji">🔶</span><h3>Objetos y Elementos</h3><span class="count">4 atajos</span></div>
+    <div class="atajos-grid">
+      <div class="atajo-item" data-texto="agrupar objetos elementos unir">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>G</kbd></div>
+        <div class="atajo-accion"><strong>Agrupar objetos</strong>Agrupa los objetos seleccionados en uno solo</div>
+      </div>
+      <div class="atajo-item" data-texto="desagrupar objetos separar dividir">
+        <div class="kbd-group"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>H</kbd></div>
+        <div class="atajo-accion"><strong>Desagrupar objetos</strong>Separa un grupo en elementos individuales</div>
+      </div>
+      <div class="atajo-item" data-texto="traer frente adelante objeto encima">
+        <div class="kbd-group"><kbd>Alt</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>F6</kbd></div>
+        <div class="atajo-accion"><strong>Traer al frente</strong>Mueve el objeto seleccionado al frente de todos</div>
+      </div>
+      <div class="atajo-item" data-texto="enviar fondo atrás objeto detrás">
+        <div class="kbd-group"><kbd>Alt</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>F5</kbd></div>
+        <div class="atajo-accion"><strong>Enviar al fondo</strong>Mueve el objeto seleccionado detrás de todos</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIP -->
+  <div class="tip-box reveal">
+    <span class="tip-icon">💡</span>
+    <div>
+      <h4>Consejo para presentaciones en vivo</h4>
+      <p>Durante una presentación los atajos más valiosos son <kbd style="background:#f0f0f0;border:1px solid #ccc;border-radius:4px;padding:2px 6px;font-size:11px;">F5</kbd> para iniciar, <kbd style="background:#f0f0f0;border:1px solid #ccc;border-radius:4px;padding:2px 6px;font-size:11px;">B</kbd> para pausar con pantalla negra cuando quieres que la atención vuelva a ti, y <kbd style="background:#f0f0f0;border:1px solid #ccc;border-radius:4px;padding:2px 6px;font-size:11px;">Esc</kbd> para salir. ¡Practícalos antes de tu presentación real!</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Atajos de Teclado · <span>PowerPoint 365</span></p>
+  <p>Centro Agroempresarial y Desarrollo Pecuario del Huila · <span>SENA</span></p>
+  <p>Instructor: <span>Julián Andrés Trujillo Morales</span> · Ficha <span>3410069</span></p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold:0.05 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const t = document.querySelector(a.getAttribute('href'));
+      if(t) t.scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+  });
+
+  const filtros = document.querySelectorAll('.filtro-btn');
+  const categorias = document.querySelectorAll('.categoria');
+
+  filtros.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filtros.forEach(b => b.classList.remove('activo'));
+      btn.classList.add('activo');
+      const cat = btn.dataset.cat;
+      categorias.forEach(c => { c.style.display = (cat==='todos' || c.dataset.cat===cat) ? '' : 'none'; });
+      document.getElementById('buscador').value = '';
+      mostrarTodos();
+    });
+  });
+
+  function mostrarTodos(){
+    document.querySelectorAll('.atajo-item').forEach(i => i.classList.remove('oculto'));
+    document.getElementById('sinResultados').style.display = 'none';
+    const catActiva = document.querySelector('.filtro-btn.activo').dataset.cat;
+    categorias.forEach(c => { c.style.display = (catActiva==='todos' || c.dataset.cat===catActiva) ? '' : 'none'; });
+  }
+
+  document.getElementById('buscador').addEventListener('input', function(){
+    const q = this.value.toLowerCase().trim();
+    filtros.forEach(b => b.classList.remove('activo'));
+    document.querySelector('[data-cat="todos"]').classList.add('activo');
+    if(!q){ mostrarTodos(); return; }
+    let hay = false;
+    categorias.forEach(cat => {
+      let tiene = false;
+      cat.querySelectorAll('.atajo-item').forEach(item => {
+        const txt = (item.dataset.texto+' '+item.innerText).toLowerCase();
+        const ok = txt.includes(q);
+        item.classList.toggle('oculto', !ok);
+        if(ok){ tiene=true; hay=true; }
+      });
+      cat.style.display = tiene ? '' : 'none';
+    });
+    document.getElementById('sinResultados').style.display = hay ? 'none' : 'block';
+  });
+</script>
+</body>
+</html>
